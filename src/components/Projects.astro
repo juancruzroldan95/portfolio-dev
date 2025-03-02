@@ -1,0 +1,63 @@
+---
+const PROJECTS = [
+  {
+    title: "Power Button",
+    description:
+      "Power Button is an e-commerce built with Next.js, integrating authentication services and databases, with optimal performance on SEO optimization.",
+    link: "https://power-button.vercel.app/",
+    github: "https://github.com/juancruzroldan95/power-button",
+    image: "/projects/power-button2.webp",
+    tags: [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "TypeScript",
+      "Firebase",
+      "Firestore",
+    ],
+  },
+  {
+    title: "Project 2",
+    description: "This is a description of project 2",
+    link: "https://example.com",
+    github: "#",
+    image: "https://via.placeholder.com/300x200",
+    tags: ["React", "TailwindCSS"],
+  },
+  {
+    title: "Project 3",
+    description: "This is a description of project 3",
+    link: "https://example.com",
+    github: "#",
+    image: "https://via.placeholder.com/300x200",
+    tags: ["React", "TailwindCSS"],
+  },
+  {
+    title: "Project 4",
+    description: "This is a description of project 4",
+    link: "https://example.com",
+    github: "#",
+    image: "https://via.placeholder.com/300x200",
+    tags: ["React", "TailwindCSS"],
+  },
+];
+---
+
+{
+  PROJECTS.map((project) => (
+    <article>
+      <h3 class="text-2cl font-semibold mb-2">{project.title}</h3>
+      <p class="text-lg mb-4 text-pretty">{project.description}</p>
+      <ul>
+        {project.tags.map((tag) => (
+          <li>{tag}</li>
+        ))}
+      </ul>
+      <img
+        class="rounded shadow-2xl shadow-white/10"
+        src={project.image}
+        alt={`Screenshot of project ${project.title}`}
+      />
+    </article>
+  ))
+}
