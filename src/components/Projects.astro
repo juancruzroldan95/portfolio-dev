@@ -1,8 +1,25 @@
 ---
-import GitHub from "../icons/GitHub.astro";
 import NextJS from "../icons/NextJS.astro";
 import Tailwind from "../icons/Tailwind.astro";
-import LinkIcon from "../icons/Link.astro";
+import React from "../icons/React.astro";
+import TypeScript from "../icons/TypeScript.astro";
+import JavaScript from "../icons/JavaScript.astro";
+import NodeJS from "../icons/NodeJS.astro";
+import Express from "../icons/ExpressJS.astro";
+import Firebase from "../icons/Firebase.astro";
+import MongoDB from "../icons/MongoDB.astro";
+import PostgreSQL from "../icons/PostgreSQL.astro";
+import MySQL from "../icons/MySQL.astro";
+import Docker from "../icons/Docker.astro";
+import AWS from "../icons/AWS.astro";
+import Vercel from "../icons/Vercel.astro";
+import ShadCN from "../icons/ShadCN.astro";
+import Drizzle from "../icons/Drizzle.astro";
+import Sequelize from "../icons/Sequelize.astro";
+import Neon from "../icons/Neon.astro";
+
+import GitHubIcon from "../icons/GitHub.astro";
+import RocketIcon from "../icons/Rocket.astro";
 import LinkButton from "./LinkButton.astro";
 
 const TAGS = {
@@ -16,31 +33,145 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
+  REACT: {
+    name: "React",
+    class: "bg-[#20232A] text-white",
+    icon: React,
+  },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-[#3178C6] text-white",
+    icon: TypeScript,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-[#F7DF1E] text-black",
+    icon: JavaScript,
+  },
+  NODE: {
+    name: "Node.js",
+    class: "bg-[#026E00] text-white",
+    icon: NodeJS,
+  },
+  EXPRESS: {
+    name: "Express.js",
+    class: "bg-[#000000] text-white",
+    icon: Express,
+  },
+  FIREBASE: {
+    name: "Firebase",
+    class: "bg-stone-800 text-white",
+    icon: Firebase,
+  },
+  MONGODB: {
+    name: "MongoDB",
+    class: "bg-[#113422] text-[#00ED64]",
+    icon: MongoDB,
+  },
+  POSTGRESQL: {
+    name: "PostgreSQL",
+    class: "bg-[#002B36] text-[#4c9ee0]",
+    icon: PostgreSQL,
+  },
+  MYSQL: {
+    name: "MySQL",
+    class: "bg-gray-100 text-[#f29221]",
+    icon: MySQL,
+  },
+  DOCKER: {
+    name: "Docker",
+    class: "bg-[#0c2545] text-[#0db7ed]",
+    icon: Docker,
+  },
+  AWS: {
+    name: "AWS",
+    class: "bg-[#232F3E] text-[#FF9900]",
+    icon: AWS,
+  },
+  VERCEL: {
+    name: "Vercel",
+    class: "bg-black text-white",
+    icon: Vercel,
+  },
+  SHADCNUI: {
+    name: "ShadCN UI",
+    class: "bg-black text-white",
+    icon: ShadCN,
+  },
+  DRIZZLE: {
+    name: "Drizzle ORM",
+    class: "bg-black text-white",
+    icon: Drizzle,
+  },
+  SEQUELIZE: {
+    name: "Sequelize",
+    class: "bg-stone-800 text-white",
+    icon: Sequelize,
+  },
+  NEON: {
+    name: "Neon",
+    class: "bg-black text-white",
+    icon: Neon,
+  },
 };
+
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "Buno",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/power-button.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "SaaS that connects businesses with freelance attorneys for on-demand legal services. It offers a seamless way to find, hire, and collaborate with lawyers for contracts, business formation, and more—providing flexible, cost-effective legal support.",
+    github: "https://github.com/juancruzroldan95/buno-app",
+    deploy: "https://bunoapp.vercel.app/",
+    image: "/projects/buno-app.webp",
+    tags: [
+      TAGS.NEXT,
+      TAGS.REACT,
+      TAGS.SHADCNUI,
+      TAGS.TYPESCRIPT,
+      TAGS.DRIZZLE,
+      TAGS.NEON,
+      TAGS.POSTGRESQL,
+      TAGS.VERCEL,
+    ],
   },
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title: "Power Button",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/power-button2.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Final Project of the Next.js course at Coderhouse. Power Button is an e-commerce built with Next.js, integrating authentication services and databases, with optimal performance on SEO optimization.",
+    github: "https://github.com/juancruzroldan95/buno-app",
+    deploy: "https://power-button.vercel.app",
+    image: "/projects/power-button.webp",
+    tags: [
+      TAGS.NEXT,
+      TAGS.REACT,
+      TAGS.TAILWIND,
+      TAGS.FIREBASE,
+      TAGS.TYPESCRIPT,
+      TAGS.VERCEL,
+    ],
+  },
+  {
+    title: "Energialy",
+    description:
+      "Energialy is a platform to integrate into the Value Chain, manage contracts between SMEs, and access financing for energy services and projects in Vaca Muerta. A single platform to hire and be hired.",
+    github: "https://github.com/energialy/energialy-app",
+    deploy: "https://energialy.vercel.app/",
+    image: "/projects/energialy.webp",
+    tags: [
+      TAGS.NODE,
+      TAGS.EXPRESS,
+      TAGS.SEQUELIZE,
+      TAGS.POSTGRESQL,
+      TAGS.JAVASCRIPT,
+      TAGS.VERCEL,
+    ],
   },
 ];
 ---
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    PROJECTS.map(({ image, title, description, tags, github, deploy }) => (
       <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
         <div class="w-full md:w-1/2">
           <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
@@ -58,7 +189,7 @@ const PROJECTS = [
             {title}
           </h3>
           <div class="flex flex-wrap mt-2">
-            <ul class="flex flex-row mb-2 gap-x-2">
+            <ul class="flex flex-row mb-2 gap-2 flex-wrap">
               {tags.map((tag) => (
                 <li>
                   <span
@@ -77,13 +208,13 @@ const PROJECTS = [
             <footer class="flex items-end justify-start mt-4 gap-x-4">
               {github && (
                 <LinkButton href={github}>
-                  <GitHub class="size-6" />
+                  <GitHubIcon class="size-6" />
                   Code
                 </LinkButton>
               )}
-              {link && (
-                <LinkButton href={link}>
-                  <LinkIcon class="size-4" />
+              {deploy && (
+                <LinkButton href={deploy}>
+                  <RocketIcon class="size-4" />
                   Preview
                 </LinkButton>
               )}
