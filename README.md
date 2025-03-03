@@ -14,8 +14,8 @@ This is my personal developer portfolio built with Astro, HTML, CSS and Tailwind
 - **Version Control:** Git, GitHub
 
 ## 🙏 Acknowledgements
-- Tailwind CSS for styling
-- Astro for building the app
+- [Tailwind CSS](https://tailwindcss.com/) for styling
+- [Astro](https://astro.build/) for building the app
 - Icons from [Tabler Icons](https://tabler.io/icons)
 - Fonts from [Fontsource](https://fontsource.org/)
 - Logos from [pheralb.svgl](https://svgl.app/)
@@ -25,6 +25,3 @@ This is my personal developer portfolio built with Astro, HTML, CSS and Tailwind
 
 ## 🚀 Deployment
 This portfolio is deployed on Vercel. You can view it live at [https://your-portfolio.vercel.app](https://your-portfolio.vercel.app).
-
-## 🤝 Contributing
-Contributions are always welcome! Feel free to fork the repo, create an issue, or submit a pull request.
