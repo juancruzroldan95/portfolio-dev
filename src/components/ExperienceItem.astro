@@ -8,11 +8,20 @@ interface Props {
   companyUrl?: string;
   startDate: string;
   endDate: string;
+  techStack?: string;
   link?: string;
 }
 
-const { title, description, company, companyUrl, startDate, endDate, link } =
-  Astro.props;
+const {
+  title,
+  description,
+  company,
+  companyUrl,
+  startDate,
+  endDate,
+  link,
+  techStack,
+} = Astro.props;
 ---
 
 <div
@@ -43,9 +52,8 @@ const { title, description, company, companyUrl, startDate, endDate, link } =
 </div>
 <p
   class="mt-3 mb-4 text-base font-normal text-gray-500 dark:text-gray-400 text-pretty"
->
-  {description}
-</p>
+  set:html={`${description}${techStack ? `<br /><span class="font-semibold">Tech stack:</span> ${techStack}` : ""}`}
+/>
 {
   link && (
     <a
