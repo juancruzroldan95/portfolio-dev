@@ -8,6 +8,8 @@ import Experience from "../components/Experience.astro";
 import Projects from "../components/Projects.astro";
 import Briefcase from "../icons/Briefcase.astro";
 import CodeIcon from "../icons/Code.astro";
+
+import { translations } from "../lang";
 ---
 
 <Layout
@@ -23,7 +25,9 @@ import CodeIcon from "../icons/Code.astro";
       <SectionContainer id="experience">
         <TitleSection>
           <Briefcase class="size-7" />
-          Work Experience
+          <span id="work-experience-title"
+            >{translations.en.workExperience}</span
+          >
         </TitleSection>
         <Experience />
       </SectionContainer>
@@ -31,10 +35,33 @@ import CodeIcon from "../icons/Code.astro";
       <SectionContainer id="projects">
         <TitleSection>
           <CodeIcon class="size-7" />
-          Projects
+          <span id="projects-title">{translations.en.projects}</span>
         </TitleSection>
         <Projects />
       </SectionContainer>
     </div>
   </main>
 </Layout>
+
+<script define:vars={{ translations }}>
+  const updateSectionTitles = (lang) => {
+    if (translations[lang]) {
+      document.getElementById("work-experience-title").textContent =
+        translations[lang].workExperience;
+      document.getElementById("projects-title").textContent =
+        translations[lang].projects;
+    }
+  };
+
+  const initialLang = document.documentElement.lang;
+  updateSectionTitles(initialLang);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const currentLang = document.documentElement.lang;
+    updateSectionTitles(currentLang);
+
+    document.addEventListener("languageChanged", (e) => {
+      updateSectionTitles(e.detail.lang);
+    });
+  });
+</script>

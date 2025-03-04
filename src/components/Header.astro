@@ -1,19 +1,21 @@
 ---
+import LanguageToggle from "./LanguageToggle.astro";
 import ThemeToggle from "./ThemeToggle.astro";
+import { translations } from "../lang";
 
 const NAV_ITEMS = [
   {
-    title: "Home",
+    id: "home",
     label: "home",
     url: "/#hero",
   },
   {
-    title: "Experience",
+    id: "experience",
     label: "experience",
     url: "/#experience",
   },
   {
-    title: "Projects",
+    id: "projects",
     label: "projects",
     url: "/#projects",
   },
@@ -32,16 +34,41 @@ const NAV_ITEMS = [
           class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500"
           aria-label={item.label}
           href={item.url}
+          id={`nav-${item.id}`}
         >
-          {item.title}
+          {translations.en.nav[item.id as keyof typeof translations.en.nav]}
         </a>
       ))
     }
+    <LanguageToggle />
     <ThemeToggle />
   </nav>
 </header>
 
-<script>
+<script define:vars={{ translations, NAV_ITEMS }}>
+  const updateNavigation = (lang) => {
+    if (translations[lang]) {
+      NAV_ITEMS.forEach((item) => {
+        const navElement = document.getElementById(`nav-${item.id}`);
+        if (navElement) {
+          navElement.textContent = translations[lang].nav[item.id];
+        }
+      });
+    }
+  };
+
+  const initialLang = document.documentElement.lang;
+  updateNavigation(initialLang);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const currentLang = document.documentElement.lang;
+    updateNavigation(currentLang);
+
+    document.addEventListener("languageChanged", (e) => {
+      updateNavigation(e.detail.lang);
+    });
+  });
+
   document.addEventListener("astro:page-load", () => {
     const sections = document.querySelectorAll("section");
     const navItems = document.querySelectorAll("header nav a");
@@ -52,7 +79,7 @@ const NAV_ITEMS = [
       }
     });
 
-    const callback = (entries: any[]) => {
+    const callback = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           navItems.forEach((item) => {

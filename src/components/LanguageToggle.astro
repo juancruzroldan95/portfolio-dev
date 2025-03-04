@@ -1,0 +1,68 @@
+---
+import LanguageIcon from "../icons/Language.astro";
+import LanguageIcon2 from "../icons/Language2.astro";
+---
+
+<div class="relative ml-1 mr-1">
+  <button
+    transition:persist
+    id="langToggleBtn"
+    class="appearance-none border-none flex hover:scale-125 transition"
+  >
+    <span class="sr-only">Choose language</span>
+    <LanguageIcon id="en" class="langToggleIcon size-5 transition-all" />
+    <LanguageIcon2
+      id="es"
+      class="langToggleIcon absolute size-5 transition-all"
+    />
+  </button>
+</div>
+
+<script is:inline>
+  const updateLangIcon = (lang) => {
+    document.querySelectorAll(".langToggleIcon").forEach((element) => {
+      element.style.scale = element.id === lang ? "1" : "0";
+    });
+  };
+
+  const lang = (() => {
+    const localStorageLang = localStorage?.getItem("lang") ?? "";
+    if (["es", "en"].includes(localStorageLang)) {
+      updateLangIcon(localStorageLang);
+      return localStorageLang;
+    }
+    if (window.navigator.language.startsWith("en")) {
+      updateLangIcon("en");
+      return "en";
+    }
+    updateLangIcon("es");
+    return "es";
+  })();
+
+  if (lang === "en") {
+    document.documentElement.lang = "en";
+  } else {
+    document.documentElement.lang = "es";
+  }
+
+  const handleLangToggleClick = () => {
+    const element = document.documentElement;
+    const isSpanish = element.lang === "es";
+    const newLang = isSpanish ? "en" : "es";
+
+    element.lang = newLang;
+    updateLangIcon(newLang);
+    localStorage.setItem("lang", newLang);
+
+    // Dispatch a custom event to notify components about language change
+    document.dispatchEvent(
+      new CustomEvent("languageChanged", {
+        detail: { lang: newLang },
+      })
+    );
+  };
+
+  document
+    .getElementById("langToggleBtn")
+    ?.addEventListener("click", handleLangToggleClick);
+</script>

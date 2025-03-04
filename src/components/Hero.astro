@@ -1,10 +1,10 @@
 ---
 const personalImageAlt = "Juan Cruz Roldan";
-import Badge from "./Badge.astro";
 import LinkedInIcon from "../icons/LinkedIn.astro";
 import GitHubIcon from "../icons/GitHub.astro";
 import MailIcon from "../icons/Mail.astro";
 import SocialPill from "./SocialPill.astro";
+import { translations } from "../lang";
 ---
 
 <div>
@@ -14,29 +14,18 @@ import SocialPill from "./SocialPill.astro";
       src="/jcroldan.webp"
       alt={personalImageAlt}
     />
-    <!-- <a
-      href="https://linkedin.com/in/juancruzroldan"
-      target="_blank"
-      rel="noopener"
-      class="flex items-center transition md:justify-center md:hover:scale-105"
-    >
-      <Badge>Disponible para trabajar</Badge>
-    </a> -->
     <h1
       class="text-3xl font-bold tracking-tight text-gray-800 md:text-4xl lg:text-5xl dark:text-white"
     >
-      Hi, I am <span class="block lg:inline">Juan Cruz Roldán</span>
+      <span id="greeting-text">{translations.en.greeting}</span>
+      <span class="block lg:inline">Juan Cruz Roldán</span>
     </h1>
   </div>
   <p
+    id="description-text"
     class="mt-6 text-md text-gray-800 dark:text-gray-300 md:text-lg lg:text-xl text-pretty"
   >
-    A full-stack web developer from Buenos Aires with 2+ years of experience
-    building for the web. I care a lot about building a great product that users
-    love. I'm always looking for new patterns, technologies, and people to learn
-    from and improve my work. On every team I work on, I make great efforts to
-    be a positive influence, deliver an excellent user experience, and help the
-    team build a maintainable architecture.
+    {translations.en.description}
   </p>
   <nav class="flex flex-wrap gap-4 mt-8">
     <SocialPill href="https://linkedin.com/in/juancruzroldan">
@@ -53,3 +42,30 @@ import SocialPill from "./SocialPill.astro";
     </SocialPill>
   </nav>
 </div>
+
+<script define:vars={{ translations }}>
+  // The translations object is now available here from the server
+
+  // Update text based on language
+  const updateHero = (lang) => {
+    document.getElementById("greeting-text").textContent =
+      translations[lang].greeting;
+    document.getElementById("description-text").textContent =
+      translations[lang].description;
+  };
+
+  // Initialize with the current language
+  const initialLang = document.documentElement.lang;
+  updateHero(initialLang);
+
+  // Listen for language changes
+  document.addEventListener("DOMContentLoaded", () => {
+    // Initial update
+    updateHero(document.documentElement.lang);
+
+    // Custom event listener for language changes
+    document.addEventListener("languageChanged", (e) => {
+      updateHero(e.detail.lang);
+    });
+  });
+</script>

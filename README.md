@@ -3,15 +3,16 @@
 This is my personal developer portfolio built with Astro, HTML, CSS and TailwindCSS. It showcases my skills, professional experience, and personal projects as a full-stack web developer. The portfolio is designed to be responsive, fast, and easy to navigate.
 
 ## ✨ Features
-- Fully responsive design, optimized for mobile and desktop.
-- Display of my skills, certifications, and technical expertise.
-- Showcases multiple projects with detailed descriptions and links.
+- Full responsive design, optimized for mobile and desktop.
+- Display of my skills, experience, and technical expertise.
+- Showcases multiple projects with a brief description, tech stack used, and links.
 - Contact section with social media links.
+- Available in English and Spanish.
+- Supports dark mode.
 
 ## 🛠️ Tech Stack
 - **Frontend:** Astro, HTML, CSS, Tailwind CSS
 - **Deployment:** Vercel
-- **Version Control:** Git, GitHub
 
 ## 🙏 Acknowledgements
 - [Tailwind CSS](https://tailwindcss.com/) for styling
@@ -24,4 +25,4 @@ This is my personal developer portfolio built with Astro, HTML, CSS and Tailwind
 - Image optimization with [Squoosh](https://squoosh.app/)
 
 ## 🚀 Deployment
-This portfolio is deployed on Vercel. You can view it live at [https://your-portfolio.vercel.app](https://your-portfolio.vercel.app).
+This portfolio is deployed on Vercel. You can view it live at [https://jcroldan.vercel.app](https://your-portfolio.vercel.app).
