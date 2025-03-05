@@ -1,10 +1,33 @@
+---
+import { translations } from "../lang";
+---
+
 <footer class="rounded-lg shadow-sm">
   <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
     <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-    <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400"
+    <span
+      class="block text-sm text-gray-500 text-center dark:text-gray-400 text-pretty"
       >© 2025 <a href="https://jcroldan.dev/" class="hover:underline"
         >Juan Cruz Roldan</a
-      >. Almost All Rights Reserved.</span
+      >. <span id="footer-text">Almost All Rights Reserved</span>.</span
     >
   </div>
 </footer>
+
+<script define:vars={{ translations }}>
+  const updateFooter = (lang) => {
+    document.getElementById("footer-text").textContent =
+      translations[lang].footer;
+  };
+
+  const initialLang = document.documentElement.lang;
+  updateFooter(initialLang);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    updateFooter(document.documentElement.lang);
+
+    document.addEventListener("languageChanged", (e) => {
+      updateFooter(e.detail.lang);
+    });
+  });
+</script>

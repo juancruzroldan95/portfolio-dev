@@ -1,8 +1,9 @@
 ---
-const { href } = Astro.props;
+const { id, href } = Astro.props;
 ---
 
 <a
+  id={id}
   target="_blank"
   href={href}
   role="link"

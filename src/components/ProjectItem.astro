@@ -1,0 +1,108 @@
+---
+import LinkButton from "./LinkButton.astro";
+import GitHubIcon from "../icons/GitHub.astro";
+import RocketIcon from "../icons/Rocket.astro";
+import { TAGS } from "../tags";
+import { translations } from "../lang";
+
+interface Props {
+  title: string;
+  description: string;
+  github: string;
+  deploy: string;
+  image: string;
+  tags: (typeof TAGS)[keyof typeof TAGS][];
+}
+
+const { title, description, github, deploy, image, tags } = Astro.props;
+---
+
+<div class="w-full md:w-1/2">
+  <div
+    class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50"
+  >
+    <img
+      alt="Recién llegado vs 5 años en Nueva Zelanda"
+      class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+      loading="lazy"
+      src={image}
+    />
+  </div>
+</div>
+
+<div class="w-full md:w-1/2 md:max-w-lg">
+  <h3
+    id="project-name"
+    class="text-2xl font-bold text-gray-800 dark:text-gray-100"
+  >
+    {title}
+  </h3>
+  <div class="flex flex-wrap mt-2">
+    <ul class="flex flex-row mb-2 gap-2 flex-wrap">
+      {
+        tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+            >
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))
+      }
+    </ul>
+
+    <div class="mt-2 text-gray-700 dark:text-gray-400 text-pretty">
+      <p id="project-description">
+        {description}
+      </p>
+    </div>
+    <footer class="flex items-end justify-start mt-4 gap-x-4">
+      <LinkButton href={github} id="code-btn">
+        <GitHubIcon class="size-6" />
+        <span>{translations.en.codeButton}</span>
+      </LinkButton>
+      <LinkButton href={deploy} id="preview-btn">
+        <RocketIcon class="size-6" />
+        <span>{translations.en.previewButton}</span>
+      </LinkButton>
+    </footer>
+  </div>
+</div>
+
+<script define:vars={{ translations }}>
+  const updateProjects = (lang) => {
+    document.querySelectorAll(".projects").forEach((projectItem) => {
+      const projectNameElement = projectItem.querySelector("#project-name");
+      const descriptionElement = projectItem.querySelector(
+        "#project-description"
+      );
+      const codeButtonElement = projectItem.querySelector("#code-btn");
+      const previewButtonElement = projectItem.querySelector("#preview-btn");
+
+      const project = projectNameElement.textContent
+        .trim()
+        .toLowerCase()
+        .replace(" ", "");
+
+      descriptionElement.textContent =
+        translations[lang].projects[project].description;
+      codeButtonElement.querySelector("span").textContent =
+        translations[lang].codeButton;
+      previewButtonElement.querySelector("span").textContent =
+        translations[lang].previewButton;
+    });
+  };
+
+  const initialLang = document.documentElement.lang;
+  updateProjects(initialLang);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    updateProjects(document.documentElement.lang);
+
+    document.addEventListener("languageChanged", (e) => {
+      updateProjects(e.detail.lang);
+    });
+  });
+</script>

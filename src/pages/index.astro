@@ -26,7 +26,7 @@ import { translations } from "../lang";
         <TitleSection>
           <Briefcase class="size-7" />
           <span id="work-experience-title"
-            >{translations.en.workExperience}</span
+            >{translations.en.experienceSection}</span
           >
         </TitleSection>
         <Experience />
@@ -35,7 +35,7 @@ import { translations } from "../lang";
       <SectionContainer id="projects">
         <TitleSection>
           <CodeIcon class="size-7" />
-          <span id="projects-title">{translations.en.projects}</span>
+          <span id="projects-title">{translations.en.projectsSection}</span>
         </TitleSection>
         <Projects />
       </SectionContainer>
@@ -47,9 +47,9 @@ import { translations } from "../lang";
   const updateSectionTitles = (lang) => {
     if (translations[lang]) {
       document.getElementById("work-experience-title").textContent =
-        translations[lang].workExperience;
+        translations[lang].experienceSection;
       document.getElementById("projects-title").textContent =
-        translations[lang].projects;
+        translations[lang].projectsSection;
     }
   };
 

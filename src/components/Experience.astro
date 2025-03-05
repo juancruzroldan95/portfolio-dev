@@ -1,26 +1,25 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro";
+import { translations } from "../lang";
 
 const EXPERIENCE = [
   {
     title: "Full Stack Web Developer",
-    company: "Taktiful Software Solutions",
+    company: "Taktiful",
     companyUrl: "https://www.linkedin.com/company/taktifulconsulting/",
-    startDate: "July 2024",
-    endDate: "Present",
-    description:
-      "Develop and maintain web applications for clients in the digital embellishment industries.",
+    startDate: translations.en.jobs.taktiful.startDate,
+    endDate: translations.en.jobs.taktiful.endDate,
+    description: translations.en.jobs.taktiful.description,
     techStack:
-      "React, Javascript, Typescript, Bootstrap, jQuery, PHP, MySQL, AWS",
+      "React, JavaScript, TypeScript, Bootstrap, jQuery, PHP, MySQL, AWS",
   },
   {
     title: "Full Stack Web Developer",
     company: "Zite",
     companyUrl: "https://www.linkedin.com/company/ziteco/",
-    startDate: "Apr. 2024",
-    endDate: "July 2024",
-    description:
-      "Develop and maintain an end-to-end web application for private market investors and companies.",
+    startDate: translations.en.jobs.zite.startDate,
+    endDate: translations.en.jobs.zite.endDate,
+    description: translations.en.jobs.zite.description,
     techStack:
       "Next.js + React, Tailwind, Shadcn UI, TypeScript, Supabase, Drizzle ORM, Postgres, Microsoft Azure",
   },
@@ -28,10 +27,11 @@ const EXPERIENCE = [
     title: "Growth Engineer",
     company: "Gainapp",
     companyUrl: "https://gainapp.com",
-    startDate: "Sept. 2023",
-    endDate: "Mar. 2024",
-    description:
-      "Growth + Software Engineering (+ Data). Develop and maintain Gain's main website and blog. Implement and configure campaign-related web technology such as UTM tags, tracking pixels, SEO, software vendor reviews and Google Analytics. Build and follow-up marketing and product dashboards in event-driven analytics software such as Mixpanel and Hotjar.",
+    startDate: translations.en.jobs.gainapp.startDate,
+    endDate: translations.en.jobs.gainapp.endDate,
+    description: translations.en.jobs.gainapp.description,
+    techStack:
+      "React, TypeScript, CSS, HTML, Gatsby, Mixpanel, Hotjat, Google Search Console",
   },
 ];
 ---
@@ -39,7 +39,7 @@ const EXPERIENCE = [
 <ol class="relative border-s border-gray-200 dark:border-gray-700">
   {
     EXPERIENCE.map((experience) => (
-      <li class="mb-10 ms-4">
+      <li class="experiences mb-10 ms-4">
         <ExperienceItem {...experience} />
       </li>
     ))
