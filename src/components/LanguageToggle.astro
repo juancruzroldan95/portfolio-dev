@@ -1,20 +1,17 @@
 ---
-import LanguageIcon from "../icons/Language.astro";
-import LanguageIcon2 from "../icons/Language2.astro";
+import SpainIcon from "../icons/Spain.astro";
+import UnitedStatesIcon from "../icons/UnitedStates.astro";
 ---
 
 <div class="relative ml-1 mr-1">
   <button
     transition:persist
     id="langToggleBtn"
-    class="appearance-none border-none flex hover:scale-125 transition"
+    class="appearance-none flex hover:scale-125 transition"
   >
     <span class="sr-only">Choose language</span>
-    <LanguageIcon id="en" class="langToggleIcon size-5 transition-all" />
-    <LanguageIcon2
-      id="es"
-      class="langToggleIcon absolute size-5 transition-all"
-    />
+    <UnitedStatesIcon id="en" class="langToggleIcon size-5 transition-all" />
+    <SpainIcon id="es" class="langToggleIcon absolute size-5 transition-all" />
   </button>
 </div>
 
