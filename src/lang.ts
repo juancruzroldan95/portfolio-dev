@@ -56,7 +56,7 @@ export const translations: Translations = {
     building for the web. I care a lot about building a great product that users
     love. I'm always looking for new patterns, technologies, and people to learn
     from and improve my work. On every team I work on, I make great efforts to be
-    a positive influence, deliver an excellent user experience, and help the team
+    a positive influence, deliver an excellent user experience, and help to
     build a maintainable architecture.`,
     experienceSection: "Work Experience",
     techStack: "Tech Stack",
@@ -122,8 +122,8 @@ export const translations: Translations = {
     description: `Desarrollador web full-stack de Buenos Aires con 2+ años de experiencia
     construyendo para la web. Me importa mucho construir un gran producto que los usuarios 
     disfruten usar. Siempre estoy buscando nuevos patrones de diseño, tecnologías y personas de las que aprender 
-    y mejorar mi trabajo. En cada equipo en el que trabajo, me esfuerzo mucho por ser 
-    una influencia positiva, ofrecer una excelente experiencia de usuario y ayudar al equipo 
+    y mejorar mi trabajo. En cada equipo en que trabajo, me esfuerzo mucho por ser 
+    una influencia positiva, ofrecer una excelente experiencia de usuario y ayudar 
     a construir una arquitectura mantenible.`,
     experienceSection: "Experiencia Laboral",
     techStack: "Tecnologías",
