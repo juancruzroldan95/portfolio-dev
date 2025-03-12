@@ -17,6 +17,7 @@ This is my personal developer portfolio built with Astro, HTML, CSS and Tailwind
 ## 🙏 Acknowledgements
 - [Tailwind CSS](https://tailwindcss.com/) for styling
 - [Astro](https://astro.build/) for building the app
+- Component from [Flowbite](https://flowbite.com/)
 - Icons from [Tabler Icons](https://tabler.io/icons)
 - Fonts from [Fontsource](https://fontsource.org/)
 - Logos from [pheralb.svgl](https://svgl.app/)
