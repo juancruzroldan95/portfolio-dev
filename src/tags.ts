@@ -68,7 +68,7 @@ export const TAGS = {
   },
   POSTGRESQL: {
     name: "PostgreSQL",
-    class: "bg-[#002B36] text-[#4c9ee0] font-semibold",
+    class: "bg-[#002B36] text-[#4c9ee0]",
     icon: PostgreSQL,
   },
   MYSQL: {
@@ -113,17 +113,17 @@ export const TAGS = {
   },
   ZOD: {
     name: "Zod",
-    class: "bg-white text-black font-semibold",
+    class: "bg-white text-black",
     icon: Zod,
   },
   GEMINI: {
     name: "Gemini",
-    class: "bg-sky-100 text-black font-semibold",
+    class: "bg-sky-100 text-black",
     icon: Gemini,
   },
   ZUSTAND: {
     name: "Zustand",
-    class: "bg-yellow-500 text-blue-900 font-semibold",
+    class: "bg-yellow-500 text-blue-900",
     icon: Zustand,
   },
 } as const;
