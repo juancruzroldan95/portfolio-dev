@@ -16,6 +16,9 @@ import ShadCN from "./icons/ShadCN.astro";
 import Drizzle from "./icons/Drizzle.astro";
 import Sequelize from "./icons/Sequelize.astro";
 import Neon from "./icons/Neon.astro";
+import Zod from "./icons/Zod.astro";
+import Gemini from "./icons/Gemini.astro";
+import Zustand from "./icons/Zustand.astro";
 
 export const TAGS = {
   NEXT: {
@@ -65,7 +68,7 @@ export const TAGS = {
   },
   POSTGRESQL: {
     name: "PostgreSQL",
-    class: "bg-[#002B36] text-[#4c9ee0]",
+    class: "bg-[#002B36] text-[#4c9ee0] font-semibold",
     icon: PostgreSQL,
   },
   MYSQL: {
@@ -107,5 +110,20 @@ export const TAGS = {
     name: "Neon",
     class: "bg-black text-white",
     icon: Neon,
+  },
+  ZOD: {
+    name: "Zod",
+    class: "bg-white text-black font-semibold",
+    icon: Zod,
+  },
+  GEMINI: {
+    name: "Gemini",
+    class: "bg-sky-100 text-black font-semibold",
+    icon: Gemini,
+  },
+  ZUSTAND: {
+    name: "Zustand",
+    class: "bg-yellow-500 text-blue-900 font-semibold",
+    icon: Zustand,
   },
 } as const;

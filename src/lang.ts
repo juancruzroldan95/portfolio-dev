@@ -31,6 +31,9 @@ type Translations = {
       buno: {
         description: string;
       },
+      walletly: {
+        description: string;
+      },
       powerbutton: {
         description: string;
       },
@@ -93,9 +96,14 @@ export const translations: Translations = {
     projectsSection: "Projects",
     projects: {
       buno: {
-        description: `SaaS that connects businesses with freelance attorneys for on-demand legal 
-        services. It offers a seamless way to find, hire, and collaborate with lawyers for contracts, 
-        business formation, and more—providing flexible, cost-effective legal support.`,
+        description: `Buno is an AI-powered platform that connects clients with attorneys. It offers a 
+        seamless way to find, hire, and collaborate with qualified attorneys for legal services. 
+        It also allows attorneys to offer their services and increase their client base.`,
+      },
+      walletly: {
+        description: `Walletly is a fully functional demo of a modern onboarding experience for digital 
+        wallets. It focuses on creating smooth, validated, multi-step signup flows — ideal for fintech 
+        and finance-related products where regulatory and KYC compliance is required.`
       },
       powerbutton: {
         description: `Final Project of the Next.js course at Coderhouse. Power Button is an e-commerce 
@@ -160,10 +168,14 @@ export const translations: Translations = {
     projectsSection: "Proyectos",
     projects: {
       buno: {
-        description: `SaaS que conecta personas y empresas con abogados independientes para servicios 
-        legales a demanda. Ofrece una manera fluida de encontrar, contratar y colaborar con 
-        abogados para contratos, formación de empresas y más, proporcionando un soporte legal 
-        flexible y rentable.`,
+        description: `Buno es una plataforma potenciada con IA que conecta clientes con abogados. 
+        Es una nueva forma de encontrar, contratar y colaborar con abogados calificados para cualquier tipo 
+        de servicio legal. También permite a los abogados ofrecer sus servicios y aumentar su cartera de clientes.`,
+      },
+      walletly: {
+        description: `Walletly es una demo de un onboarding flow moderno para billeteras digitales. 
+        Se enfoca en crear flujos de sign up fluídos, validados, persistentes y de varias etapas — ideales 
+        para productos financieros y de fintech donde se requiere cumplimiento regulatorio y KYC.`,
       },
       powerbutton: {
         description: `Proyecto final del curso de Next.js en Coderhouse. Power Button es un 
