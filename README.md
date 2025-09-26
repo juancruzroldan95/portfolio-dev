@@ -2,7 +2,7 @@
 
 This is my personal developer portfolio built with Astro, HTML, CSS and Tailwind CSS. It showcases my skills, professional experience, and personal projects as a full-stack web developer. The portfolio is designed to be responsive, fast, and easy to navigate.
 
-## ✨ Features
+## Features
 - Full responsive design, optimized for mobile and desktop.
 - Display of my skills, experience, and technical expertise.
 - Showcases multiple projects with a brief description, tech stack used, and links.
@@ -10,11 +10,11 @@ This is my personal developer portfolio built with Astro, HTML, CSS and Tailwind
 - Available in English and Spanish.
 - Supports dark mode.
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **Frontend:** Astro, HTML, CSS, Tailwind CSS
 - **Deployment:** Vercel
 
-## 🙏 Acknowledgements
+## Acknowledgements
 - [Tailwind CSS](https://tailwindcss.com/) for styling
 - [Astro](https://astro.build/) for building the app
 - Components from [Flowbite](https://flowbite.com/)
