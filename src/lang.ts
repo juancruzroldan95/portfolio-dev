@@ -11,17 +11,17 @@ type Translations = {
     techStack: string;
     jobs: {
       taktiful: {
-        description: string;
+        description: string[];
         startDate: string;
         endDate: string;
       };
       zite: {
-        description: string;
+        description: string[];
         startDate: string;
         endDate: string;
       };
       gainapp: {
-        description: string;
+        description: string[];
         startDate: string;
         endDate: string;
       };
@@ -65,32 +65,30 @@ export const translations: Translations = {
     techStack: "Tech Stack",
     jobs: {
       taktiful: {
-        description: `Development and maintenance of three products for clients in the
-        digital printing industry, optimizing processes and enhancing user experience.
-        Implementation of new features across all layers of the stack, backend and frontend
-        performance optimization, bug resolution, and continuous improvement, ensuring
-        platform scalability.`,
-        startDate: "July 2024",
+        description: [
+          "Developed and maintained three products for the digital printing industry, adding new features while improving scalability and user experience across all the layers of the stack.",
+          "Led the development of an Angular project from scratch. Developed a design software similar to Canva, integrating Meta's AI model “Segment Anything Model (SAM)” to generate SVG masks from images and produce ready-to-print PDF files for embellishment workflows. The MVP was showcased at the PRINTING United Expo 2025 in Las Vegas, attracting interest and initiating business opportunities with companies such as Staples and Shutterstock.",
+        ],
+        startDate: "Jul 2024",
         endDate: "Present",
       },
       zite: {
-        description: `Full-stack development of a platform designed to improve private market
-        investment processes. Focus on user experience, leading the product's UI redesign.
-        Responsible for bug resolution, continuous application improvements, and contributing
-        new ideas to the product. Deep understanding of the business to provide digital
-        solutions that enable investors to manage their portfolios and centralize their
-        workflow in a single platform.`,
-        startDate: "Apr. 2024",
-        endDate: "July 2024",
+        description: [
+          "Delivered end-to-end feature development across frontend and backend using Next.js, React, TypeScript, Node.js, and PostgreSQL in an AI-powered SaaS platform for private market investments.",
+          "Migrated the platform's styling system to Shadcn UI components, including a full modal redesign and the development of dynamic table visibility controls used throughout the application.",
+          "Built and maintained a layout system to visualize and manage kanban-style flows, helping users navigate complex investment processes more efficiently.",
+        ],
+        startDate: "Apr 2024",
+        endDate: "Jul 2024",
       },
       gainapp: {
-        description: `Growth + Software Engineering (+ Data). Develop and maintain Gain's main
-        website and blog. Implement and configure campaign-related web technology such as UTM
-        tags, tracking pixels, SEO, software vendor reviews and Google Analytics. Build and
-        follow-up marketing and product dashboards in event-driven analytics software such as
-        Mixpanel and Hotjar.`,
-        startDate: "Sept. 2023",
-        endDate: "Mar. 2024",
+        description: [
+          "Developed and maintained Gain's main website and blog, ensuring performance, brand consistency, and SEO best practices across the site.",
+          "Implemented and configured digital marketing technologies such as UTM tags, tracking pixels, and integrations with software review platforms including G2, Capterra, GetApp, and Software Advice.",
+          "Designed, built, and managed marketing and product dashboards using event-based analytics tools like Mixpanel and Hotjar, providing actionable insights to Product and Growth teams.",
+        ],
+        startDate: "Sep 2023",
+        endDate: "Mar 2024",
       },
     },
     projectsSection: "Projects",
@@ -137,30 +135,28 @@ export const translations: Translations = {
     techStack: "Tecnologías",
     jobs: {
       taktiful: {
-        description: `Desarrollo y mantenimiento de tres productos para clientes en la
-        industria de la impresión digital, optimizando procesos y mejorando la experiencia
-        del usuario. Implementación de nuevas funcionalidades en todas las capas del stack,
-        optimización del rendimiento del backend y frontend, resolución de bugs y mejora
-        continua, asegurando la escalabilidad de las plataformas.`,
+        description: [
+          "Desarrollo y mantenimiento de tres productos para la industria de la impresión digital, agregando nuevas funcionalidades, la escalabilidad y la experiencia de usuario en todo el stack.",
+          "Lideré el desarrollo de una aplicación en Angular desde cero. Desarrollé un software de diseño tipo Canva, integrando un modelo de Inteligencia Artificial de Meta “Segment Anything Model (SAM)” para generar máscaras SVG a partir de imágenes y producir archivos PDF ready-to-print para flujos de embellishment. El MVP fue presentado en la feria PRINTING United Expo 2025 en Las Vegas, despertando interés y dando inicio a negocios con empresas como Staples y Shutterstock.",
+        ],
         startDate: "jul. 2024",
         endDate: "Actualidad",
       },
       zite: {
-        description: `Desarrollo full-stack de una plataforma diseñada para mejorar los procesos
-        de inversión del mercado privado. Priorización de la experiencia del usuario;
-        rediseño de la UI del producto. Encargado de resolver bugs, mejora continua de 
-        la aplicación y aportar nuevas ideas al producto. Profunda comprensión del negocio
-        para ofrecer soluciones digitales que permitan a los inversores administrar su
-        portafolio y centralizar su workflow.`,
+        description: [
+          "Desarrollo end-to-end de funcionalidades en frontend y backend utilizando Next.js, React, TypeScript, Node.js y PostgreSQL en una plataforma SaaS potenciada con IA para inversiones en mercados privados.",
+          "Migré el sistema de estilos de la plataforma a componentes de Shadcn UI, incluyendo la renovación de modales y el desarrollo de controles dinámicos de visibilidad de tablas utilizados en toda la aplicación.",
+          "Diseñé y desarrollé un sistema de layout para visualizar y gestionar flujos tipo kanban, ayudando a los usuarios a navegar por procesos de inversión complejos de forma más clara y eficiente."
+        ],
         startDate: "abr. 2024",
         endDate: "jul. 2024",
       },
       gainapp: {
-        description: `Growth + Software Engineering (+ Data). Desarrollar y mantener el website
-        y el blog de Gain. Implementar y configurar tecnologías web para campañas de marketing
-        como UTM tags, tracking pixels, SEO, software vendor reviews y Google Analytics.
-        Implementar y diseñar dashboards de datos con métricas de Marketing, Producto y website
-        en herramientas event-driven como Mixpanel y Hotjar.`,
+        description: [
+          "Desarrollé y mantuve el sitio web principal y el blog de Gain, asegurando rendimiento, coherencia visual con la marca y buenas prácticas de SEO en todo el sitio.",
+          "Implementé y configuré tecnologías de marketing digital como UTM tags, tracking pixels, integraciones con plataformas de reseñas de software como G2, Capterra, GetApp y Software Advice.",
+          "Implementé, diseñé, construí y gestioné dashboards de marketing y producto utilizando herramientas de analítica basadas en eventos como Mixpanel y Hotjar, brindando insights accionables a los equipos de Producto y Growth.",
+        ],
         startDate: "sept. 2023",
         endDate: "mar. 2024",
       },

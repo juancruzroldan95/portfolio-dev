@@ -5,7 +5,7 @@ import { translations } from "../lang";
 
 interface Props {
   title: string;
-  description: string;
+  description: string[];
   company: string;
   companyUrl?: string;
   startDate: string;
@@ -45,11 +45,12 @@ const { title, description, company, companyUrl, startDate, endDate, tags } =
     />
   </a>
 </div>
-<p
+<ul
   id="experience-description"
-  class="mt-3 mb-4 text-base font-normal text-gray-500 dark:text-gray-400 text-pretty"
-  set:html={`${description}`}
-/>
+  class="mt-3 mb-4 text-base font-normal text-gray-500 dark:text-gray-400 text-pretty list-none list-outside space-y-2"
+>
+  {description.map((bullet) => <li class="pl-2">{bullet}</li>)}
+</ul>
 <p class="text-gray-600 dark:text-gray-300 text-pretty mb-2">
   <span id="tech-stack" class="font-semibold">
     {translations.en.techStack}
@@ -83,7 +84,10 @@ const { title, description, company, companyUrl, startDate, endDate, tags } =
 
       const job = companyElement.textContent.trim().toLowerCase();
 
-      descriptionElement.innerHTML = translations[lang].jobs[job].description;
+      const bullets = translations[lang].jobs[job].description;
+      descriptionElement.innerHTML = bullets
+        .map((bullet) => `<li>${bullet}</li>`)
+        .join("");
       techStackElement.textContent = translations[lang].techStack;
       startDateElement.textContent = translations[lang].jobs[job].startDate;
       endDateElement.textContent = translations[lang].jobs[job].endDate;
