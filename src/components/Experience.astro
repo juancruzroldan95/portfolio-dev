@@ -1,5 +1,6 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro";
+import { TAGS } from "../tags";
 import { translations } from "../lang";
 
 const EXPERIENCE = [
@@ -10,8 +11,16 @@ const EXPERIENCE = [
     startDate: translations.en.jobs.taktiful.startDate,
     endDate: translations.en.jobs.taktiful.endDate,
     description: translations.en.jobs.taktiful.description,
-    techStack:
-      "React, JavaScript, TypeScript, Bootstrap, jQuery, HTML, PHP, MySQL, AWS",
+    tags: [
+      TAGS.ANGULAR,
+      TAGS.REACT,
+      TAGS.ANTD,
+      TAGS.BOOTSTRAP,
+      TAGS.TYPESCRIPT,
+      TAGS.PHP,
+      TAGS.MYSQL,
+      TAGS.AWS,
+    ],
   },
   {
     title: "Full Stack Web Developer",
@@ -20,8 +29,17 @@ const EXPERIENCE = [
     startDate: translations.en.jobs.zite.startDate,
     endDate: translations.en.jobs.zite.endDate,
     description: translations.en.jobs.zite.description,
-    techStack:
-      "Next.js + React, Tailwind CSS, Shadcn UI, TypeScript, Drizzle ORM, Postgres, Supabase, Microsoft Azure",
+    tags: [
+      TAGS.NEXT,
+      TAGS.REACT,
+      TAGS.SHADCNUI,
+      TAGS.TAILWIND,
+      TAGS.TYPESCRIPT,
+      TAGS.DRIZZLE,
+      TAGS.POSTGRESQL,
+      TAGS.SUPABASE,
+      TAGS.AZURE,
+    ],
   },
   {
     title: "Marketing Web Developer",
@@ -30,7 +48,14 @@ const EXPERIENCE = [
     startDate: translations.en.jobs.gainapp.startDate,
     endDate: translations.en.jobs.gainapp.endDate,
     description: translations.en.jobs.gainapp.description,
-    techStack: "React, TypeScript, CSS, HTML, Gatsby, Mixpanel, Hotjar",
+    tags: [
+      TAGS.GATSBY,
+      TAGS.REACT,
+      TAGS.TYPESCRIPT,
+      TAGS.HTML,
+      TAGS.CSS,
+      TAGS.SANITY,
+    ],
   },
 ];
 ---

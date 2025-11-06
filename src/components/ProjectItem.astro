@@ -76,7 +76,7 @@ const { title, description, github, deploy, image, tags } = Astro.props;
     document.querySelectorAll(".projects").forEach((projectItem) => {
       const projectNameElement = projectItem.querySelector("#project-name");
       const descriptionElement = projectItem.querySelector(
-        "#project-description"
+        "#project-description",
       );
       const codeButtonElement = projectItem.querySelector("#code-btn");
       const previewButtonElement = projectItem.querySelector("#preview-btn");

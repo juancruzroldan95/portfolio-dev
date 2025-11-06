@@ -1,5 +1,6 @@
 ---
 import ExternalLinkIcon from "../icons/ExternalLink.astro";
+import { TAGS } from "../tags";
 import { translations } from "../lang";
 
 interface Props {
@@ -9,18 +10,11 @@ interface Props {
   companyUrl?: string;
   startDate: string;
   endDate: string;
-  techStack?: string;
+  tags: (typeof TAGS)[keyof typeof TAGS][];
 }
 
-const {
-  title,
-  description,
-  company,
-  companyUrl,
-  startDate,
-  endDate,
-  techStack,
-} = Astro.props;
+const { title, description, company, companyUrl, startDate, endDate, tags } =
+  Astro.props;
 ---
 
 <div
@@ -56,18 +50,32 @@ const {
   class="mt-3 mb-4 text-base font-normal text-gray-500 dark:text-gray-400 text-pretty"
   set:html={`${description}`}
 />
-<p class="text-gray-600 dark:text-gray-300 text-pretty">
+<p class="text-gray-600 dark:text-gray-300 text-pretty mb-2">
   <span id="tech-stack" class="font-semibold">
     {translations.en.techStack}
-  </span>: {techStack}
+  </span>
 </p>
+<ul class="flex flex-row mb-2 gap-2 flex-wrap">
+  {
+    tags.map((tag) => (
+      <li>
+        <span
+          class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+        >
+          <tag.icon class="size-4" />
+          {tag.name}
+        </span>
+      </li>
+    ))
+  }
+</ul>
 
 <script define:vars={{ translations }}>
   const updateExperience = (lang) => {
     document.querySelectorAll(".experiences").forEach((experienceItem) => {
       const companyElement = experienceItem.querySelector("#company-name");
       const descriptionElement = experienceItem.querySelector(
-        "#experience-description"
+        "#experience-description",
       );
       const techStackElement = experienceItem.querySelector("#tech-stack");
       const startDateElement = experienceItem.querySelector("#start-date");

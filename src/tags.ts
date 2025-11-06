@@ -19,17 +19,47 @@ import Neon from "./icons/Neon.astro";
 import Zod from "./icons/Zod.astro";
 import Gemini from "./icons/Gemini.astro";
 import Zustand from "./icons/Zustand.astro";
+import Bootstrap from "./icons/Bootstrap.astro";
+import CSS from "./icons/Css.astro";
+import HTML from "./icons/Html.astro";
+import Gatsby from "./icons/Gatsby.astro";
+import Supabase from "./icons/Supabase.astro";
+import Sanity from "./icons/Sanity.astro";
+import PHP from "./icons/Php.astro";
+import Azure from "./icons/Azure.astro";
+import Angular from "./icons/Angular.astro";
+import AntDesign from "./icons/AntDesign.astro";
 
 export const TAGS = {
+  ANGULAR: {
+    name: "Angular",
+    class: "bg-zinc-900 text-fuchsia-500",
+    icon: Angular,
+  },
   NEXT: {
     name: "Next.js",
     class: "bg-black text-white",
     icon: NextJS,
   },
+  GATSBY: {
+    name: "Gatsby",
+    class: "bg-white text-black",
+    icon: Gatsby,
+  },
   TAILWIND: {
     name: "Tailwind CSS",
     class: "bg-[#003159] text-white",
     icon: Tailwind,
+  },
+  BOOTSTRAP: {
+    name: "Bootstrap",
+    class: "bg-white text-[#7E13F8]",
+    icon: Bootstrap,
+  },
+  ANTD: {
+    name: "Ant Design",
+    class: "bg-black text-white",
+    icon: AntDesign,
   },
   REACT: {
     name: "React",
@@ -46,10 +76,25 @@ export const TAGS = {
     class: "bg-[#F7DF1E] text-black",
     icon: JavaScript,
   },
+  CSS: {
+    name: "CSS",
+    class: "bg-white text-black",
+    icon: CSS,
+  },
+  HTML: {
+    name: "HTML",
+    class: "bg-white text-black",
+    icon: HTML,
+  },
   NODE: {
     name: "Node.js",
     class: "bg-[#026E00] text-white",
     icon: NodeJS,
+  },
+  PHP: {
+    name: "PHP",
+    class: "bg-[#777BB4] text-white",
+    icon: PHP,
   },
   EXPRESS: {
     name: "Express.js",
@@ -60,6 +105,11 @@ export const TAGS = {
     name: "Firebase",
     class: "bg-stone-800 text-white",
     icon: Firebase,
+  },
+  SUPABASE: {
+    name: "Supabase",
+    class: "bg-zinc-900 text-white",
+    icon: Supabase,
   },
   MONGODB: {
     name: "MongoDB",
@@ -85,6 +135,11 @@ export const TAGS = {
     name: "AWS",
     class: "bg-[#232F3E] text-[#FF9900]",
     icon: AWS,
+  },
+  AZURE: {
+    name: "Azure",
+    class: "bg-white text-[#0078d4]",
+    icon: Azure,
   },
   VERCEL: {
     name: "Vercel",
@@ -125,5 +180,10 @@ export const TAGS = {
     name: "Zustand",
     class: "bg-yellow-500 text-blue-900",
     icon: Zustand,
+  },
+  SANITY: {
+    name: "Sanity",
+    class: "bg-black text-white",
+    icon: Sanity,
   },
 } as const;
