@@ -28,10 +28,13 @@ type Translations = {
     };
     projectsSection: string;
     projects: {
-      buno: {
+      hardy: {
         description: string;
       },
       walletly: {
+        description: string;
+      },
+      buno: {
         description: string;
       },
       powerbutton: {
@@ -93,15 +96,21 @@ export const translations: Translations = {
     },
     projectsSection: "Projects",
     projects: {
-      buno: {
-        description: `Buno is an AI-powered platform that connects clients with attorneys. It offers a 
-        seamless way to find, hire, and collaborate with qualified attorneys for legal services. 
-        It also allows attorneys to offer their services and increase their client base.`,
+      hardy: {
+        description: `Hardy is a landing page for a peanut butter company. 
+        The website showcases the products, recipes, the brand story, and provides an easy way for 
+        potential customers to get in touch. It was designed with a focus on the brand's 
+        visual identity, emphasizing warmth and simplicity in the user experience.`,
       },
       walletly: {
         description: `Walletly is a fully functional demo of a modern onboarding experience for digital 
         wallets. It focuses on creating smooth, validated, multi-step signup flows — ideal for fintech 
         and finance-related products where regulatory and KYC compliance is required.`
+      },
+      buno: {
+        description: `Buno is an AI-powered platform that connects clients with attorneys. It offers a 
+        seamless way to find, hire, and collaborate with qualified attorneys for legal services. 
+        It also allows attorneys to offer their services and increase their client base.`,
       },
       powerbutton: {
         description: `Final Project of the Next.js course at Coderhouse. Power Button is an e-commerce 
@@ -163,15 +172,21 @@ export const translations: Translations = {
     },
     projectsSection: "Proyectos",
     projects: {
-      buno: {
-        description: `Buno es una plataforma potenciada con IA que conecta clientes con abogados. 
-        Es una nueva forma de encontrar, contratar y colaborar con abogados calificados para cualquier tipo 
-        de servicio legal. También permite a los abogados ofrecer sus servicios y aumentar su cartera de clientes.`,
+      hardy: {
+        description: `Hardy es una landing page para un emprendimiento de pastas de maní. 
+        El sitio presenta los productos, recetas, la historia de la marca y facilita el contacto con potenciales clientes. 
+        Fue diseñado con foco en la identidad visual de la marca, priorizando la calidez y 
+        simplicidad en la experiencia de usuario.`,
       },
       walletly: {
         description: `Walletly es una demo de un onboarding flow moderno para billeteras digitales. 
         Se enfoca en crear flujos de sign up fluídos, validados, persistentes y de varias etapas — ideales 
         para productos financieros y de fintech donde se requiere cumplimiento regulatorio y KYC.`,
+      },
+      buno: {
+        description: `Buno es una plataforma potenciada con IA que conecta clientes con abogados. 
+        Es una nueva forma de encontrar, contratar y colaborar con abogados calificados para cualquier tipo 
+        de servicio legal. También permite a los abogados ofrecer sus servicios y aumentar su cartera de clientes.`,
       },
       powerbutton: {
         description: `Proyecto final del curso de Next.js en Coderhouse. Power Button es un 

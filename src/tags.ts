@@ -29,6 +29,8 @@ import PHP from "./icons/Php.astro";
 import Azure from "./icons/Azure.astro";
 import Angular from "./icons/Angular.astro";
 import AntDesign from "./icons/AntDesign.astro";
+import AstroIcon from "./icons/AstroIcon.astro";
+import Motion from "./icons/Motion.astro";
 
 export const TAGS = {
   ANGULAR: {
@@ -121,6 +123,11 @@ export const TAGS = {
     class: "bg-[#002B36] text-[#4c9ee0]",
     icon: PostgreSQL,
   },
+  ASTRO: {
+    name: "Astro",
+    class: "bg-black text-white",
+    icon: AstroIcon,
+  },
   MYSQL: {
     name: "MySQL",
     class: "bg-gray-100 text-[#f29221]",
@@ -185,5 +192,10 @@ export const TAGS = {
     name: "Sanity",
     class: "bg-black text-white",
     icon: Sanity,
+  },
+  MOTION: {
+    name: "Motion",
+    class: "bg-neutral-800 text-yellow-300",
+    icon: Motion,
   },
 } as const;
