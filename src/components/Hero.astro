@@ -1,46 +1,41 @@
 ---
 const personalImageAlt = "Juan Cruz Roldan";
-import LinkedInIcon from "../icons/LinkedIn.astro";
-import GitHubIcon from "../icons/GitHub.astro";
-import MailIcon from "../icons/Mail.astro";
-import SocialPill from "./SocialPill.astro";
+import { SOCIALS } from "@constants/socials";
+import Socials from "./Socials.astro";
 import { translations } from "../lang";
 ---
 
 <div>
-  <div class="flex gap-4 mb-4 items-center">
-    <img
-      class="rounded-full shadow-lg size-16"
-      src="/jcroldan.webp"
-      alt={personalImageAlt}
-    />
-    <h1
-      class="text-3xl font-bold tracking-tight text-gray-800 md:text-4xl lg:text-5xl dark:text-white"
-    >
-      <span id="greeting-text">{translations.en.greeting}</span>
-      <span class="block lg:inline">Juan Cruz Roldán</span>
-    </h1>
+  <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
+    <div class="flex-shrink-0">
+      <img
+        class="rounded-full shadow-lg size-40 object-cover"
+        src="/jcroldan.webp"
+        alt={personalImageAlt}
+      />
+    </div>
+    <div class="flex flex-col gap-2 text-center md:text-left">
+      <h1
+        class="text-3xl font-bold tracking-tight text-gray-800 md:text-4xl dark:text-white"
+      >
+        <span id="greeting-text">{translations.en.greeting}</span>
+        <span>Juan Cruz</span>
+      </h1>
+      <p
+        id="description-text"
+        class="text-md text-gray-800 dark:text-gray-300 md:text-lg text-pretty"
+      >
+        {translations.en.description}
+      </p>
+      {
+        SOCIALS.filter((social) => social.active).length > 0 && (
+          <nav>
+            <Socials class="justify-center md:justify-start" />
+          </nav>
+        )
+      }
+    </div>
   </div>
-  <p
-    id="description-text"
-    class="mt-6 text-md text-gray-800 dark:text-gray-300 md:text-lg lg:text-xl text-pretty"
-  >
-    {translations.en.description}
-  </p>
-  <nav class="flex flex-wrap gap-4 mt-8">
-    <SocialPill href="https://linkedin.com/in/juancruzroldan">
-      <LinkedInIcon class="size-4" />
-      LinkedIn
-    </SocialPill>
-    <SocialPill href="https://github.com/juancruzroldan95">
-      <GitHubIcon class="size-4" />
-      GitHub
-    </SocialPill>
-    <SocialPill href="mailto:juancruz.roldan19@gmail.com">
-      <MailIcon class="size-4" />
-      juancruz.roldan19@gmail.com
-    </SocialPill>
-  </nav>
 </div>
 
 <script define:vars={{ translations }}>

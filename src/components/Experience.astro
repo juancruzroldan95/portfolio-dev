@@ -1,9 +1,25 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro";
-import { TAGS } from "../tags";
+import { TAGS } from "../constants/tags";
 import { translations } from "../lang";
 
 const EXPERIENCE = [
+  {
+    title: "Full Stack Developer",
+    company: "Depay",
+    companyUrl: "https://www.depay.us/",
+    startDate: translations.en.jobs.depay.startDate,
+    endDate: translations.en.jobs.depay.endDate,
+    description: translations.en.jobs.depay.description,
+    tags: [
+      TAGS.NESTJS,
+      TAGS.TYPESCRIPT,
+      TAGS.TYPEORM,
+      TAGS.MYSQL,
+      TAGS.SWAGGER,
+      TAGS.AWS,
+    ],
+  },
   {
     title: "Full Stack Developer",
     company: "Taktiful",
@@ -23,7 +39,7 @@ const EXPERIENCE = [
     ],
   },
   {
-    title: "Full Stack Web Developer",
+    title: "Full Stack Developer",
     company: "Zite",
     companyUrl: "https://zite.co/",
     startDate: translations.en.jobs.zite.startDate,

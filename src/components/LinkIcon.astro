@@ -1,0 +1,18 @@
+---
+const { href, class: className, label } = Astro.props;
+---
+
+<a
+  href={href}
+  role="link"
+  class:list={[
+    "inline-block transition-all duration-150 hover:rotate-6 hover:text-accent cursor-pointer text-gray-700 dark:text-gray-300",
+    className,
+  ]}
+  aria-label={label}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <slot />
+  <span class="sr-only">{label}</span>
+</a>

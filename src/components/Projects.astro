@@ -1,6 +1,6 @@
 ---
 import ProjectItem from "./ProjectItem.astro";
-import { TAGS } from "../tags";
+import { TAGS } from "../constants/tags";
 import { translations } from "../lang";
 
 const PROJECTS = [
@@ -8,7 +8,7 @@ const PROJECTS = [
     title: "Hardy",
     description: translations.en.projects.hardy.description,
     github: "https://github.com/juancruzroldan95/hardy-fit",
-    deploy: "https://hardy-fit.vercel.app/",
+    deploy: "https://hardy.ar/",
     image: "/projects/hardy.webp",
     tags: [
       TAGS.ASTRO,
@@ -49,21 +49,6 @@ const PROJECTS = [
       TAGS.TAILWIND,
       TAGS.DRIZZLE,
       TAGS.POSTGRESQL,
-      TAGS.TYPESCRIPT,
-      TAGS.FIREBASE,
-      TAGS.VERCEL,
-    ],
-  },
-  {
-    title: "Power Button",
-    description: translations.en.projects.powerbutton.description,
-    github: "https://github.com/juancruzroldan95/buno-app",
-    deploy: "https://power-button.vercel.app",
-    image: "/projects/power-button.webp",
-    tags: [
-      TAGS.NEXT,
-      TAGS.REACT,
-      TAGS.TAILWIND,
       TAGS.TYPESCRIPT,
       TAGS.FIREBASE,
       TAGS.VERCEL,

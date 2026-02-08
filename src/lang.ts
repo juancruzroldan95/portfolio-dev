@@ -10,6 +10,11 @@ type Translations = {
     experienceSection: string;
     techStack: string;
     jobs: {
+      depay: {
+        description: string[];
+        startDate: string;
+        endDate: string;
+      };
       taktiful: {
         description: string[];
         startDate: string;
@@ -57,38 +62,43 @@ export const translations: Translations = {
       experience: "Experience",
       projects: "Projects",
     },
-    greeting: "Hi, I am",
-    description: `A full-stack web developer from Buenos Aires with 2+ years of experience
-    building for the web. I care a lot about building a great product that users
-    love. I'm always looking for new patterns, technologies, and people to learn
-    from and improve my work. On every team I work on, I make great efforts to be
-    a positive influence, deliver an excellent user experience, and help to
-    build a maintainable architecture.`,
+    greeting: "Hi, I'm",
+    description: `Full-stack developer from Buenos Aires with 3+ years of experience
+    building for the web.`,
     experienceSection: "Work Experience",
     techStack: "Tech Stack",
     jobs: {
+      depay: {
+        description: [
+          `Developing the real-time payment rails of Latin America.`,
+        ],
+        startDate: "Nov 2025",
+        endDate: "Present",
+      },
       taktiful: {
         description: [
-          "Developed and maintained three products for the digital printing industry, adding new features while improving scalability and user experience across all the layers of the stack.",
-          "Led the development of an Angular project from scratch. Developed a design software similar to Canva, integrating Meta's AI model “Segment Anything Model (SAM)” to generate SVG masks from images and produce ready-to-print PDF files for embellishment workflows. The MVP was showcased at the PRINTING United Expo 2025 in Las Vegas, attracting interest and initiating business opportunities with companies such as Staples and Shutterstock.",
+          `Led the development of a software similar to Canva, integrating Meta's AI model “Segment 
+          Anything Model (SAM)” to generate SVG masks from images and produce ready-to-print PDF files 
+          for embellishment workflows. The MVP was showcased at the PRINTING United Expo 2025 in Las 
+          Vegas, attracting interest and initiating business opportunities with companies such as Staples 
+          and Shutterstock.`,
         ],
         startDate: "Jul 2024",
-        endDate: "Present",
+        endDate: "Nov 2025",
       },
       zite: {
         description: [
-          "Delivered end-to-end feature development across frontend and backend using Next.js, React, TypeScript, Node.js, and PostgreSQL in an AI-powered SaaS platform for private market investments.",
-          "Migrated the platform's styling system to Shadcn UI components, including a full modal redesign and the development of dynamic table visibility controls used throughout the application.",
-          "Built and maintained a layout system to visualize and manage kanban-style flows, helping users navigate complex investment processes more efficiently.",
+          `Developed end-to-end features for a SaaS platform designed to streamline investment workflows, 
+          particularly in private markets where assets like stocks, debt, and real estate are traded privately.`,
         ],
         startDate: "Apr 2024",
         endDate: "Jul 2024",
       },
       gainapp: {
         description: [
-          "Developed and maintained Gain's main website and blog, ensuring performance, brand consistency, and SEO best practices across the site.",
-          "Implemented and configured digital marketing technologies such as UTM tags, tracking pixels, and integrations with software review platforms including G2, Capterra, GetApp, and Software Advice.",
-          "Designed, built, and managed marketing and product dashboards using event-based analytics tools like Mixpanel and Hotjar, providing actionable insights to Product and Growth teams.",
+          `Developed Gain's main website and blog. Implemented digital marketing technologies. 
+          Designed and built marketing and product dashboards using event-based analytics 
+          tools like Mixpanel and Hotjar.`,
         ],
         startDate: "Sep 2023",
         endDate: "Mar 2024",
@@ -97,7 +107,7 @@ export const translations: Translations = {
     projectsSection: "Projects",
     projects: {
       hardy: {
-        description: `Hardy is a landing page for a peanut butter company. 
+        description: `Hardy is a website for a peanut butter company. 
         The website showcases the products, recipes, the brand story, and provides an easy way for 
         potential customers to get in touch. It was designed with a focus on the brand's 
         visual identity, emphasizing warmth and simplicity in the user experience.`,
@@ -134,37 +144,43 @@ export const translations: Translations = {
       projects: "Proyectos",
     },
     greeting: "Hola, soy",
-    description: `Desarrollador web full-stack de Buenos Aires con 2+ años de experiencia
-    construyendo para la web. Me importa mucho construir un gran producto que los usuarios 
-    disfruten usar. Siempre estoy buscando nuevos patrones de diseño, tecnologías y personas de las que aprender 
-    y mejorar mi trabajo. En cada equipo en que trabajo, me esfuerzo mucho por ser 
-    una influencia positiva, ofrecer una excelente experiencia de usuario y ayudar 
-    a construir una arquitectura mantenible.`,
+    description: `Desarrollador full-stack de Buenos Aires con 3+ años de experiencia
+    construyendo para la web.`,
     experienceSection: "Experiencia Laboral",
     techStack: "Tecnologías",
     jobs: {
+      depay: {
+        description: [
+          `Desarrollando la red de pagos en tiempo real más grande de Latinoamérica.`,
+        ],
+        startDate: "nov. 2025",
+        endDate: "Presente",
+      },
       taktiful: {
         description: [
-          "Desarrollo y mantenimiento de tres productos para la industria de la impresión digital, agregando nuevas funcionalidades, la escalabilidad y la experiencia de usuario en todo el stack.",
-          "Lideré el desarrollo de una aplicación en Angular desde cero. Desarrollé un software de diseño tipo Canva, integrando un modelo de Inteligencia Artificial de Meta “Segment Anything Model (SAM)” para generar máscaras SVG a partir de imágenes y producir archivos PDF ready-to-print para flujos de embellishment. El MVP fue presentado en la feria PRINTING United Expo 2025 en Las Vegas, despertando interés y dando inicio a negocios con empresas como Staples y Shutterstock.",
+          `Lideré el desarrollo de un software de diseño tipo Canva, integrando un modelo de Inteligencia 
+          Artificial de Meta “Segment Anything Model (SAM)” para generar máscaras SVG a partir de imágenes 
+          y producir archivos PDF ready-to-print para flujos de embellishment. El MVP fue presentado en 
+          la feria PRINTING United Expo 2025 en Las Vegas, despertando interés y dando inicio a negocios 
+          con empresas como Staples y Shutterstock.`,
         ],
         startDate: "jul. 2024",
-        endDate: "Actualidad",
+        endDate: "nov. 2025",
       },
       zite: {
         description: [
-          "Desarrollo end-to-end de funcionalidades en frontend y backend utilizando Next.js, React, TypeScript, Node.js y PostgreSQL en una plataforma SaaS potenciada con IA para inversiones en mercados privados.",
-          "Migré el sistema de estilos de la plataforma a componentes de Shadcn UI, incluyendo la renovación de modales y el desarrollo de controles dinámicos de visibilidad de tablas utilizados en toda la aplicación.",
-          "Diseñé y desarrollé un sistema de layout para visualizar y gestionar flujos tipo kanban, ayudando a los usuarios a navegar por procesos de inversión complejos de forma más clara y eficiente."
+          `Desarrollé features completos en una plataforma SaaS diseñada para agilizar los flujos 
+          de trabajo de inversión, especialmente en los mercados privados donde se negocian activos 
+          como acciones, deuda y bienes raíces de forma privada.`,
         ],
         startDate: "abr. 2024",
         endDate: "jul. 2024",
       },
       gainapp: {
         description: [
-          "Desarrollé y mantuve el sitio web principal y el blog de Gain, asegurando rendimiento, coherencia visual con la marca y buenas prácticas de SEO en todo el sitio.",
-          "Implementé y configuré tecnologías de marketing digital como UTM tags, tracking pixels, integraciones con plataformas de reseñas de software como G2, Capterra, GetApp y Software Advice.",
-          "Implementé, diseñé, construí y gestioné dashboards de marketing y producto utilizando herramientas de analítica basadas en eventos como Mixpanel y Hotjar, brindando insights accionables a los equipos de Producto y Growth.",
+          `Desarrollé y mantuve el sitio web principal y el blog de Gain. 
+          Implementé tecnologías de marketing digital como optimización SEO y UTM tags. 
+          Construí dashboards para el equipo de Growth y Producto en Mixpanel y Hotjar.`,
         ],
         startDate: "sept. 2023",
         endDate: "mar. 2024",
@@ -173,7 +189,7 @@ export const translations: Translations = {
     projectsSection: "Proyectos",
     projects: {
       hardy: {
-        description: `Hardy es una landing page para un emprendimiento de pastas de maní. 
+        description: `Hardy es una landing page para una marca de cremas de maní. 
         El sitio presenta los productos, recetas, la historia de la marca y facilita el contacto con potenciales clientes. 
         Fue diseñado con foco en la identidad visual de la marca, priorizando la calidez y 
         simplicidad en la experiencia de usuario.`,

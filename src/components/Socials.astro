@@ -1,0 +1,38 @@
+---
+import { SOCIALS } from "@constants/socials";
+import LinkIcon from "./LinkIcon.astro";
+import LinkedInIcon from "@icons/LinkedIn.astro";
+import GitHubIcon from "@icons/GitHub.astro";
+import InstagramIcon from "@icons/Instagram.astro";
+import MailIcon from "@icons/Mail.astro";
+
+export interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+
+const iconMap = {
+  linkedin: LinkedInIcon,
+  github: GitHubIcon,
+  instagram: InstagramIcon,
+  mail: MailIcon,
+};
+---
+
+<div class:list={["flex flex-wrap", className]}>
+  {
+    SOCIALS.filter((social) => social.active).map((social) => {
+      const IconComponent = iconMap[social.icon as keyof typeof iconMap];
+      return (
+        <LinkIcon
+          href={social.href}
+          class="size-10 p-1.5"
+          label={social.linkTitle}
+        >
+          {IconComponent && <IconComponent class="size-full" />}
+        </LinkIcon>
+      );
+    })
+  }
+</div>

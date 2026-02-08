@@ -1,36 +1,39 @@
-import NextJS from "./icons/NextJS.astro";
-import Tailwind from "./icons/Tailwind.astro";
-import React from "./icons/React.astro";
-import TypeScript from "./icons/TypeScript.astro";
-import JavaScript from "./icons/JavaScript.astro";
-import NodeJS from "./icons/NodeJS.astro";
-import Express from "./icons/ExpressJS.astro";
-import Firebase from "./icons/Firebase.astro";
-import MongoDB from "./icons/MongoDB.astro";
-import PostgreSQL from "./icons/PostgreSQL.astro";
-import MySQL from "./icons/MySQL.astro";
-import Docker from "./icons/Docker.astro";
-import AWS from "./icons/AWS.astro";
-import Vercel from "./icons/Vercel.astro";
-import ShadCN from "./icons/ShadCN.astro";
-import Drizzle from "./icons/Drizzle.astro";
-import Sequelize from "./icons/Sequelize.astro";
-import Neon from "./icons/Neon.astro";
-import Zod from "./icons/Zod.astro";
-import Gemini from "./icons/Gemini.astro";
-import Zustand from "./icons/Zustand.astro";
-import Bootstrap from "./icons/Bootstrap.astro";
-import CSS from "./icons/Css.astro";
-import HTML from "./icons/Html.astro";
-import Gatsby from "./icons/Gatsby.astro";
-import Supabase from "./icons/Supabase.astro";
-import Sanity from "./icons/Sanity.astro";
-import PHP from "./icons/Php.astro";
-import Azure from "./icons/Azure.astro";
-import Angular from "./icons/Angular.astro";
-import AntDesign from "./icons/AntDesign.astro";
-import AstroIcon from "./icons/AstroIcon.astro";
-import Motion from "./icons/Motion.astro";
+import NextJS from "@icons/NextJS.astro";
+import Tailwind from "@icons/Tailwind.astro";
+import React from "@icons/React.astro";
+import TypeScript from "@icons/TypeScript.astro";
+import JavaScript from "@icons/JavaScript.astro";
+import NodeJS from "@icons/NodeJS.astro";
+import Express from "@icons/ExpressJS.astro";
+import Firebase from "@icons/Firebase.astro";
+import MongoDB from "@icons/MongoDB.astro";
+import PostgreSQL from "@icons/PostgreSQL.astro";
+import MySQL from "@icons/MySQL.astro";
+import Docker from "@icons/Docker.astro";
+import AWS from "@icons/AWS.astro";
+import Vercel from "@icons/Vercel.astro";
+import ShadCN from "@icons/ShadCN.astro";
+import Drizzle from "@icons/Drizzle.astro";
+import Sequelize from "@icons/Sequelize.astro";
+import Neon from "@icons/Neon.astro";
+import Zod from "@icons/Zod.astro";
+import Gemini from "@icons/Gemini.astro";
+import Zustand from "@icons/Zustand.astro";
+import Bootstrap from "@icons/Bootstrap.astro";
+import CSS from "@icons/Css.astro";
+import HTML from "@icons/Html.astro";
+import Gatsby from "@icons/Gatsby.astro";
+import Supabase from "@icons/Supabase.astro";
+import Sanity from "@icons/Sanity.astro";
+import PHP from "@icons/Php.astro";
+import Azure from "@icons/Azure.astro";
+import Angular from "@icons/Angular.astro";
+import AntDesign from "@icons/AntDesign.astro";
+import AstroIcon from "@icons/AstroIcon.astro";
+import Motion from "@icons/Motion.astro";
+import NestJS from "@icons/NestJS.astro";
+import TypeORM from "@icons/TypeORM.astro";
+import Swagger from "@icons/Swagger.astro";
 
 export const TAGS = {
   ANGULAR: {
@@ -197,5 +200,20 @@ export const TAGS = {
     name: "Motion",
     class: "bg-neutral-800 text-yellow-300",
     icon: Motion,
+  },
+  NESTJS: {
+    name: "NestJS",
+    class: "bg-black text-white",
+    icon: NestJS,
+  },
+  TYPEORM: {
+    name: "TypeORM",
+    class: "bg-purple-600 text-white",
+    icon: TypeORM,
+  },
+  SWAGGER: {
+    name: "Swagger",
+    class: "bg-white text-slate-700",
+    icon: Swagger,
   },
 } as const;
