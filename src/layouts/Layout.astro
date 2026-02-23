@@ -6,8 +6,8 @@ import "@fontsource-variable/outfit";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { ViewTransitions } from "astro:transitions";
-import GoogleAnalytics from "@astro-kits/google-analytics";
 import { SOCIALS } from "@constants/socials";
+import Analytics from "@vercel/analytics/astro";
 
 interface Props {
   title: string;
@@ -96,7 +96,7 @@ const schema = {
     </script>
 
     <ViewTransitions />
-    <GoogleAnalytics />
+    <Analytics />
   </head>
 
   <body class="relative text-black dark:text-white">
