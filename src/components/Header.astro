@@ -117,6 +117,8 @@ const NAV_ITEMS = [
 </script>
 
 <style>
+  @reference "../styles/global.css";
+
   nav {
     animation: nav-shadown 1s linear both;
     animation-timeline: scroll();
@@ -132,7 +134,7 @@ const NAV_ITEMS = [
       @apply dark:bg-gray-800/0 bg-white/0;
     }
     to {
-      @apply shadow-lg ring-1 backdrop-blur ring-white/10;
+      @apply shadow-lg ring-1 backdrop-blur-sm ring-white/10;
     }
   }
 </style>

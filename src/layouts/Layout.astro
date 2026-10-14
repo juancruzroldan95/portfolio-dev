@@ -2,12 +2,12 @@
 import "@fontsource-variable/onest";
 import "@fontsource-variable/jetbrains-mono";
 import "@fontsource-variable/outfit";
+import "../styles/global.css";
 
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 import { SOCIALS } from "@constants/socials";
-import Analytics from "@vercel/analytics/astro";
 
 interface Props {
   title: string;
@@ -95,8 +95,7 @@ const schema = {
       }
     </script>
 
-    <ViewTransitions />
-    <Analytics />
+    <ClientRouter />
   </head>
 
   <body class="relative text-black dark:text-white">
@@ -121,14 +120,6 @@ const schema = {
 </html>
 
 <style is:global>
-  :root {
-    --color-accent: #3b82f6;
-  }
-
-  .dark {
-    --color-accent: #eab308;
-  }
-
   html {
     font-family: "Outfit Variable", "Onest Variable", system-ui, sans-serif;
     scroll-behavior: smooth;
