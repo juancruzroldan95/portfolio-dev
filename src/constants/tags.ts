@@ -34,6 +34,11 @@ import Motion from "@icons/Motion.astro";
 import NestJS from "@icons/NestJS.astro";
 import TypeORM from "@icons/TypeORM.astro";
 import Swagger from "@icons/Swagger.astro";
+import Kafka from "@icons/Kafka.astro";
+import Kubernetes from "@icons/Kubernetes.astro";
+import Convex from "@icons/Convex.astro";
+import OpenAI from "@icons/OpenAI.astro";
+import Vite from "@icons/Vite.astro";
 
 export const TAGS = {
   ANGULAR: {
@@ -52,7 +57,7 @@ export const TAGS = {
     icon: Gatsby,
   },
   TAILWIND: {
-    name: "Tailwind CSS",
+    name: "Tailwind",
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
@@ -157,7 +162,7 @@ export const TAGS = {
     icon: Vercel,
   },
   SHADCNUI: {
-    name: "ShadCN UI",
+    name: "shadcn",
     class: "bg-black text-white",
     icon: ShadCN,
   },
@@ -215,5 +220,30 @@ export const TAGS = {
     name: "Swagger",
     class: "bg-white text-slate-700",
     icon: Swagger,
+  },
+  KAFKA: {
+    name: "Kafka",
+    class: "bg-black text-white",
+    icon: Kafka,
+  },
+  KUBERNETES: {
+    name: "Kubernetes",
+    class: "bg-[#326CE5] text-white",
+    icon: Kubernetes,
+  },
+  CONVEX: {
+    name: "Convex",
+    class: "bg-[#1F1F1F] text-white",
+    icon: Convex,
+  },
+  OPENAI: {
+    name: "OpenAI",
+    class: "bg-black text-white",
+    icon: OpenAI,
+  },
+  VITE: {
+    name: "Vite",
+    class: "bg-[#1B1B2F] text-white",
+    icon: Vite,
   },
 } as const;
