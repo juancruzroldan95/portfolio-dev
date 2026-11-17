@@ -17,7 +17,7 @@ interface Props {
 
 const {
   title = "Juan Cruz Roldán",
-  description = "Full Stack Developer",
+  description = "Software developer from Buenos Aires building payment systems and AI-powered products.",
   image = "/jcroldan.webp",
 } = Astro.props;
 
@@ -29,7 +29,7 @@ const schema = {
   name: "Juan Cruz Roldan",
   url: typeof Astro.site === "string" ? Astro.site : Astro.site?.toString(),
   sameAs: SOCIALS.filter((s) => s.active).map((s) => s.href),
-  jobTitle: "Full Stack Developer",
+  jobTitle: "Software Developer",
   worksFor: {
     "@type": "Organization",
     name: "Depay",

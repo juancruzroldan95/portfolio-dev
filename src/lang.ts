@@ -63,25 +63,28 @@ export const translations: Translations = {
       projects: "Projects",
     },
     greeting: "Hi, I'm",
-    description: `Full-stack developer from Buenos Aires with 3+ years of experience
-    building for the web.`,
+    description: `Software developer from Buenos Aires with 3+ years of experience. I care deeply about delivering quality software, focusing on architecture and system design. I am always looking for new patterns, technologies, and people to learn from to improve my work. On every team I join, I strive to be a positive influence and someone my teammates can count on, helping us deliver tangible results on time.`,
     experienceSection: "Work Experience",
     techStack: "Tech Stack",
     jobs: {
       depay: {
         description: [
-          `Developing the real-time payment rails of Latin America.`,
+          `Build and operate the settlement engine that moves customer funds across accounts and providers.`,
+          `Integrated 8 payment and crypto providers and launched 3 new payment rails to production.`,
+          `Migrated the legacy funds API from an ECS monolith to Balance Engine: 10 EKS workers using Kafka, PostgreSQL, and a Debezium outbox, now in production.`,
+          `Rolled out a “build once, promote everywhere” CI/CD pipeline across 4 repositories.`,
+          `Technical reference for a team of 6 engineers through code reviews, design spikes, and architecture conventions.`,
         ],
         startDate: "Nov 2025",
         endDate: "Present",
       },
       taktiful: {
         description: [
-          `Led the development of a software similar to Canva, integrating Meta's AI model “Segment 
-          Anything Model (SAM)” to generate SVG masks from images and produce ready-to-print PDF files 
-          for embellishment workflows. The MVP was showcased at the PRINTING United Expo 2025 in Las 
-          Vegas, attracting interest and initiating business opportunities with companies such as Staples 
-          and Shutterstock.`,
+          `Lead developer of the company's AI platform: a single API providing AI-generated embellishment masks and print-ready PDFs to every Taktiful product and client.`,
+          `Reduced vendor lock-in and outage risk by routing requests across 5+ AI providers with automatic fallback.`,
+          `Turned an internal tool into a sellable product with multi-tenant API keys and per-client cost tracking for billing.`,
+          `Led the development of an AI-powered, Canva-like app for creating print-ready embellishment files without Illustrator, Photoshop, or a designer.`,
+          `Showcased the MVP at PRINTING United Expo 2025 in Las Vegas, starting business conversations with Staples and Shutterstock.`,
         ],
         startDate: "Jul 2024",
         endDate: "Nov 2025",
@@ -101,7 +104,7 @@ export const translations: Translations = {
           tools like Mixpanel and Hotjar.`,
         ],
         startDate: "Sep 2023",
-        endDate: "Mar 2024",
+        endDate: "Jun 2024",
       },
     },
     projectsSection: "Projects",
@@ -144,25 +147,28 @@ export const translations: Translations = {
       projects: "Proyectos",
     },
     greeting: "Hola, soy",
-    description: `Desarrollador full-stack de Buenos Aires con 3+ años de experiencia
-    construyendo para la web.`,
+    description: `Desarrollador de software de Buenos Aires con más de 3 años de experiencia. Me importa mucho entregar software de calidad, con foco en la arquitectura y el diseño de sistemas. Siempre busco nuevos patrones, tecnologías y personas de quienes aprender para mejorar mi trabajo. En cada equipo al que me sumo, me esfuerzo por ser una influencia positiva y alguien en quien mis compañeros puedan confiar, ayudándonos a entregar resultados concretos a tiempo.`,
     experienceSection: "Experiencia Laboral",
     techStack: "Tecnologías",
     jobs: {
       depay: {
         description: [
-          `Desarrollando la red de pagos en tiempo real más grande de Latinoamérica.`,
+          `Desarrollo y opero el motor de liquidación que mueve fondos de clientes entre cuentas y proveedores.`,
+          `Integré 8 proveedores de pagos y cripto y llevé 3 nuevas vías de pago a producción.`,
+          `Migré la API de fondos de un monolito en ECS a Balance Engine: 10 workers en EKS con Kafka, PostgreSQL y un outbox con Debezium, ya en producción.`,
+          `Implementé un pipeline de CI/CD de “compilar una vez, promover a todos los entornos” en 4 repositorios.`,
+          `Soy referente técnico de un equipo de 6 ingenieros: revisiones de código, exploración de soluciones y convenciones de arquitectura.`,
         ],
         startDate: "nov. 2025",
         endDate: "Presente",
       },
       taktiful: {
         description: [
-          `Lideré el desarrollo de un software de diseño tipo Canva, integrando un modelo de Inteligencia 
-          Artificial de Meta “Segment Anything Model (SAM)” para generar máscaras SVG a partir de imágenes 
-          y producir archivos PDF ready-to-print para flujos de embellishment. El MVP fue presentado en 
-          la feria PRINTING United Expo 2025 en Las Vegas, despertando interés y dando inicio a negocios 
-          con empresas como Staples y Shutterstock.`,
+          `Fui el desarrollador principal de la plataforma de IA de la empresa: una API que genera máscaras para acabados de impresión y PDFs listos para imprimir para todos los productos y clientes de Taktiful.`,
+          `Reduje la dependencia de proveedores y el riesgo de interrupciones al distribuir solicitudes entre más de 5 proveedores de IA con fallback automático.`,
+          `Convertí una herramienta interna en un producto comercializable con claves de API por cliente y seguimiento de costos para facturación.`,
+          `Lideré el desarrollo de una aplicación de diseño tipo Canva con IA para crear archivos de acabados listos para imprimir sin Illustrator, Photoshop ni un diseñador.`,
+          `Presenté el MVP en PRINTING United Expo 2025 en Las Vegas, lo que inició conversaciones comerciales con Staples y Shutterstock.`,
         ],
         startDate: "jul. 2024",
         endDate: "nov. 2025",
@@ -183,7 +189,7 @@ export const translations: Translations = {
           Construí dashboards para el equipo de Growth y Producto en Mixpanel y Hotjar.`,
         ],
         startDate: "sept. 2023",
-        endDate: "mar. 2024",
+        endDate: "jun. 2024",
       },
     },
     projectsSection: "Proyectos",
