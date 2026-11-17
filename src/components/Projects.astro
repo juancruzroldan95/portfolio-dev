@@ -5,7 +5,41 @@ import { translations } from "../lang";
 
 const PROJECTS = [
   {
+    title: "Bitacory",
+    isActive: true,
+    description: translations.en.projects.bitacory.description,
+    github: "https://github.com/juancruzroldan95/bitacory-app",
+    deploy: "https://bitacory.space/",
+    image: "/projects/bitacory.webp",
+    imageClass: "object-contain bg-[#002530]",
+    tags: [
+      TAGS.OPENAI,
+      TAGS.REACT,
+      TAGS.CONVEX,
+      TAGS.VITE,
+      TAGS.TAILWIND,
+      TAGS.SHADCNUI,
+    ],
+  },
+  {
+    title: "Estudio Enzetti",
+    isActive: true,
+    description: translations.en.projects.estudioenzetti.description,
+    github: "https://github.com/juancruzroldan95/enzetti-law",
+    deploy: "https://www.estudioenzetti.com/",
+    image: "/projects/estudio-enzetti.webp",
+    imageClass: "object-contain bg-[#0c1a30]",
+    tags: [
+      TAGS.ASTRO,
+      TAGS.TAILWIND,
+      TAGS.MOTION,
+      TAGS.TYPESCRIPT,
+      TAGS.VERCEL,
+    ],
+  },
+  {
     title: "Hardy",
+    isActive: false,
     description: translations.en.projects.hardy.description,
     github: "https://github.com/juancruzroldan95/hardy-fit",
     deploy: "https://hardy.ar/",
@@ -20,6 +54,7 @@ const PROJECTS = [
   },
   {
     title: "Walletly",
+    isActive: false,
     description: translations.en.projects.walletly.description,
     github: "https://github.com/juancruzroldan95/wallet-signup-flow",
     deploy: "https://walletly-demo.vercel.app/",
@@ -37,6 +72,7 @@ const PROJECTS = [
   },
   {
     title: "Buno",
+    isActive: false,
     description: translations.en.projects.buno.description,
     github: "https://github.com/juancruzroldan95/buno-app",
     deploy: "https://bunoapp.vercel.app/",
@@ -59,7 +95,7 @@ const PROJECTS = [
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map((project) => (
+    PROJECTS.filter((project) => project.isActive).map((project) => (
       <article class="projects flex flex-col gap-8 group md:flex-row">
         <ProjectItem {...project} />
       </article>

@@ -33,6 +33,12 @@ type Translations = {
     };
     projectsSection: string;
     projects: {
+      bitacory: {
+        description: string;
+      },
+      estudioenzetti: {
+        description: string;
+      },
       hardy: {
         description: string;
       },
@@ -109,6 +115,12 @@ export const translations: Translations = {
     },
     projectsSection: "Projects",
     projects: {
+      estudioenzetti: {
+        description: `Website for Estudio Enzetti, a Buenos Aires law firm specializing in workplace accidents, occupational diseases, and traffic accidents. Built with a mobile-first approach, it combines service pages, direct WhatsApp contact, Google reviews, and Instagram and TikTok feeds. Daily incremental regeneration keeps external content cached, alongside SEO optimization and error monitoring.`,
+      },
+      bitacory: {
+        description: `Bitacory is a personal journaling and goal-tracking app with an AI companion for reflection. It combines rich-text notes, measurable milestones, and conversations that recover context from past sessions through semantic search. Users can reference notes in chat, while automatic templates help them prepare for and reflect on therapy sessions.`,
+      },
       hardy: {
         description: `Hardy is a website for a peanut butter company. 
         The website showcases the products, recipes, the brand story, and provides an easy way for 
@@ -194,6 +206,12 @@ export const translations: Translations = {
     },
     projectsSection: "Proyectos",
     projects: {
+      estudioenzetti: {
+        description: `Sitio web de Estudio Enzetti, un estudio jurídico de Buenos Aires especializado en accidentes de trabajo, enfermedades profesionales y accidentes de tránsito. Diseñado con foco en dispositivos móviles, combina páginas de servicios, contacto directo por WhatsApp, reseñas de Google y publicaciones de Instagram y TikTok. Incorpora regeneración incremental diaria para mantener el contenido externo en caché, optimización SEO y monitoreo de errores.`,
+      },
+      bitacory: {
+        description: `Bitacory es una app de diario personal y seguimiento de objetivos con un compañero de IA para reflexionar. Combina notas con texto enriquecido, hitos medibles y conversaciones que recuperan el contexto de sesiones anteriores mediante búsqueda semántica. Permite mencionar notas en el chat y genera plantillas automáticas para prepararse antes de terapia y registrar lo aprendido después.`,
+      },
       hardy: {
         description: `Hardy es una landing page para una marca de cremas de maní. 
         El sitio presenta los productos, recetas, la historia de la marca y facilita el contacto con potenciales clientes. 
